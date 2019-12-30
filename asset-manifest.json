@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/reactjs-wp-org-themes/static/css/main.3c9449b7.chunk.css",
+    "main.js": "/reactjs-wp-org-themes/static/js/main.e045bbab.chunk.js",
+    "main.js.map": "/reactjs-wp-org-themes/static/js/main.e045bbab.chunk.js.map",
+    "runtime-main.js": "/reactjs-wp-org-themes/static/js/runtime-main.b2e96641.js",
+    "runtime-main.js.map": "/reactjs-wp-org-themes/static/js/runtime-main.b2e96641.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/reactjs-wp-org-themes/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.6a881856.chunk.js": "/reactjs-wp-org-themes/static/js/2.6a881856.chunk.js",
+    "static/js/2.6a881856.chunk.js.map": "/reactjs-wp-org-themes/static/js/2.6a881856.chunk.js.map",
+    "index.html": "/reactjs-wp-org-themes/index.html",
+    "precache-manifest.23d66971f69b09cabec8a620d4f4c9dd.js": "/reactjs-wp-org-themes/precache-manifest.23d66971f69b09cabec8a620d4f4c9dd.js",
+    "service-worker.js": "/reactjs-wp-org-themes/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/reactjs-wp-org-themes/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.3c9449b7.chunk.css.map": "/reactjs-wp-org-themes/static/css/main.3c9449b7.chunk.css.map",
+    "static/js/2.6a881856.chunk.js.LICENSE": "/reactjs-wp-org-themes/static/js/2.6a881856.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b2e96641.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.6a881856.chunk.js",
+    "static/css/main.3c9449b7.chunk.css",
+    "static/js/main.e045bbab.chunk.js"
+  ]
+}
