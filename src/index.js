@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 /*class ThemePreview extends React.Component {
   constructor(props) {
@@ -30,12 +30,12 @@ class Theme extends React.Component {
 
   render() {
     return (
-      <div className="theme" onClick={this.showPreview}>
+      <div className="theme col-md-3" onClick={this.showPreview}>
          <div className="inner" style={{backgroundImage: `url(${this.props.item.screenshot_url})`}}>
           <div className="overlay" />
           <div className="content">
-            <p>{this.props.item.name}</p>
-            <p>{this.props.item.version}</p>
+            <h2 className="h5">{this.props.item.name}</h2>
+            <p>Version {this.props.item.version}</p>
           </div>
         </div>
         {/*<p>{this.props.item.slug}</p>
@@ -60,7 +60,7 @@ class Themes extends React.Component {
     let result = this.props.themes;
     let themes = result.themes || {};
     return (
-      <div className="themes">
+      <div className="themes row">
       { Object.keys( themes ).map( (key) => <Theme item={themes[key]} key={key} /> ) }
       </div>
     );
@@ -77,7 +77,23 @@ class ThemesContainer extends React.Component {
   // onChange = ( search ) => {
   //   this.setState( { search } );
   // };
-  //
+  
+  initialLoadSites = () => {
+    fetch( 'http://api.wordpress.org/themes/info/1.1/?action=query_themes&request[browse]=popular' ).then(response => {
+        return response.json();
+      }).then(data => {
+
+        console.log( data );
+        this.setState( {
+          themes : data,
+          search_term: '',
+        } );
+      });
+  }
+
+  componentDidMount = () => {
+    this.initialLoadSites()
+  }
   // componentWillUpdate = () => {
   //   console.log( 'mount' + this.state.search_term );
   // }
@@ -96,10 +112,7 @@ class ThemesContainer extends React.Component {
         } );
       });
     } else {
-      this.setState({
-          search_term: '',
-          themes : [],
-      })
+      this.initialLoadSites()
     }
     // console.log( event.target.value );
   }
@@ -115,12 +128,13 @@ class ThemesContainer extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>WordPress Themes</h2>
+      <div className="container">
+        <div className="header">
+          <h2>WordPress Themes</h2>
 
-        <input type="search" className="search-input" placeholder="Search.." onChange={this.searchTheme} />
-        { this.searchTermBox() }
-
+          <input type="search" className="search-input form-control" placeholder="Search.." onChange={this.searchTheme} />
+          { this.searchTermBox() }
+        </div>
         <Themes themes={this.state.themes} />
       </div>
     );

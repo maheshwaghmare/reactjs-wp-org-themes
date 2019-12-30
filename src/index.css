@@ -2,15 +2,32 @@ body {
   font-family: sans-serif;
 }
 .theme {
-    border: 1px solid #f2f2f2;
-    float: left;
-    width: 24.33%;
     cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.header {
+    text-align: center;
+    padding: 3em 0;
+}
+
+.header h2 {
+    margin-bottom: .6em;
+    font-weight: bold;
+}
+
+.search-input {
+    margin-bottom: .5em;
 }
 
 .inner p {
     margin-bottom: 5px;
     margin-top: 5px;
+}
+
+.form-control.search-input {
+    display: inline-block;
+    width: auto;
 }
 
 .inner p:first-child {
@@ -31,6 +48,7 @@ body {
 }
 
 .inner {
+    border: 1px solid #f2f2f2;
     position: relative;
     height: 200px;
     background-size: cover;
