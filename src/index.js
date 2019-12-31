@@ -3,14 +3,34 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 
-class Theme extends React.Component {
+/*class ThemePreview extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
+    return(
+      <div className="theme-preview">
+        <h2>{this.props.item.name}</h2>
+        <p>{this.props.item.version}</p>
+      </div>
+    )
+  }
+}*/
+
+class Theme extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  showPreview = () => {
+    console.log( this.props.item );
+    // <ThemePreview item={this.props.item} />
+  }
+
+  render() {
     return (
-      <div className="theme">
+      <div className="theme" onClick={this.showPreview}>
          <div className="inner" style={{backgroundImage: `url(${this.props.item.screenshot_url})`}}>
           <div className="overlay" />
           <div className="content">
