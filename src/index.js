@@ -11,7 +11,7 @@ class Theme extends React.Component {
   render() {
     return (
       <div className="theme">
-         <div className="inner" style={{background: `url(${this.props.item.screenshot_url})`}}>
+         <div className="inner" style={{backgroundImage: `url(${this.props.item.screenshot_url})`}}>
           <div className="overlay" />
           <div className="content">
             <p>{this.props.item.name}</p>
